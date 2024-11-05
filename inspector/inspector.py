@@ -21,12 +21,12 @@ class Inspector(Node):
                                     '/viz/move_action',
                                     self.move_action_callback)
 
-    def move_action_callback(self, goal):
+    def move_action_callback(self, goal_handle):
         self.get_logger().info("Move Action Called. Goal Is")
-        self.get_logger().info(goal)
+        self.get_logger().error(f"{goal_handle.request}")
         self.get_logger().info("END GOAL")
-        goal.succeed()
-        return MoveGroup.result
+        goal_handle.succeed()
+        return MoveGroup.Result()
 
 def main(args=None):
     rclpy.init()

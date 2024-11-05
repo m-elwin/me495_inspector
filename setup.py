@@ -16,8 +16,8 @@ setup(
     zip_safe=True,
     maintainer='elwin',
     maintainer_email='elwin@northwestern.edu',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Intercept move_group actions from rviz to see what is happening.',
+    license='GPLv3',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
